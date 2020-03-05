@@ -9,7 +9,7 @@
  *                            
  *  Copyright (C), 2016, Beijing Run.Co., Ltd.
  *
- *  ChangeLog   :      1111       
+ *  ChangeLog   :          
  *
  ***********************************************************************/
 
@@ -17,24 +17,23 @@
 #define __UUPTDECRYPT_H__
 #include <iostream>
 #include <netinet/in.h>
-
 using namespace std;
 
 #define KEY_LENTH	16
 #define UUPT_IN_HEX	0
 #define UUPT_IN_ORI	1
 
-//¼ÓÃÜÊı¾İ½á¹¹
+//åŠ å¯†æ•°æ®ç»“æ„
 struct UUPT_DECRYPT_ARG_S
 {
-	unsigned char *pSrc;	//¼ÓÃÜÊı¾İbuffer
-	int nSrcLen;		//¼ÓÃÜÊı¾İ³¤¶È
-	unsigned char *pKey;	//ÃØÔ¿×Ö·û´®
-	int nKeyLen;		//ÃØÔ¿×Ö·û´®³¤¶È
-	unsigned char *pDst;	//½âÃÜÊı¾İbuffer
-	int nDstLen;		//½âÃÜÊı¾İ³¤¶È
-	int nOffSet;		//ÓĞĞ§ĞÅÏ¢Æ«ÒÆÁ¿
-	short nInType;		//Ô­Ê¼ÃÜÎÄÀàĞÍ
+	unsigned char *pSrc;	//åŠ å¯†æ•°æ®buffer
+	int nSrcLen;		//åŠ å¯†æ•°æ®é•¿åº¦
+	unsigned char *pKey;	//ç§˜é’¥å­—ç¬¦ä¸²
+	int nKeyLen;		//ç§˜é’¥å­—ç¬¦ä¸²é•¿åº¦
+	unsigned char *pDst;	//è§£å¯†æ•°æ®buffer
+	int nDstLen;		//è§£å¯†æ•°æ®é•¿åº¦
+	int nOffSet;		//æœ‰æ•ˆä¿¡æ¯åç§»é‡
+	short nInType;		//åŸå§‹å¯†æ–‡ç±»å‹
 
 	UUPT_DECRYPT_ARG_S()		
 	{
@@ -50,7 +49,7 @@ struct UUPT_DECRYPT_ARG_S
 };
 
 
-//ÃÜÔ¿×ª»¯Êı¾İ½á¹¹
+//å¯†é’¥è½¬åŒ–æ•°æ®ç»“æ„
 struct UUPT_FORMAT_KEY
 {
 	int Key1;
@@ -85,5 +84,3 @@ bool is_hex(char ch);
 bool hex2byte(unsigned char *pHex, int nHexLen, unsigned char *pByte, int &nByteLen);
 
 #endif
-
-
